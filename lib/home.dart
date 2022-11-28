@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:news_app/news_card.dart';
+import 'package:news_app/read_page.dart';
 import 'package:news_app/stories.dart';
 
 class HomePage extends StatefulWidget {
@@ -166,8 +167,16 @@ class _HomePageState extends State<HomePage> {
                               child: Align(
                                 heightFactor: 1.0,
                                 alignment: Alignment.topCenter,
-                                child: NewsCard(
-                                  child: _post[index],
+                                child: GestureDetector(
+                                  onTap: () => Navigator.pushReplacement(
+                                      context, MaterialPageRoute(
+                                    builder: (context) {
+                                      return  ReadPage(imagePath: _post[index],);
+                                    },
+                                  )),
+                                  child: NewsCard(
+                                    child: _post[index],
+                                  ),
                                 ),
                               ),
                             ),

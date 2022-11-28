@@ -5,7 +5,7 @@ import 'package:news_app/skeleton.dart';
 
 class NewsCard extends StatelessWidget {
   final String child;
-  NewsCard({super.key, required this.child});
+  const NewsCard({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
