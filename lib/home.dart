@@ -107,13 +107,8 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             //stories
-            isLoading
-                ? const Center(
-                    child: CircularProgressIndicator(
-                      backgroundColor: Colors.white,
-                    ),
-                  )
-                : AnimatedOpacity(
+            
+                     AnimatedOpacity(
                     duration: const Duration(milliseconds: 200),
                     opacity: closeTopContainer ? 0 : 1,
                     child: AnimatedContainer(
@@ -135,14 +130,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
 
-            //posts
-            isLoading
-                ? const Center(
-                    child: CircularProgressIndicator(
-                      backgroundColor: Colors.white,
-                    ),
-                  )
-                : Expanded(
+           
+                   Expanded(
                     flex: 4,
                     child: Center(
                       child: ListView.builder(
