@@ -14,6 +14,7 @@ class ReadPage extends StatelessWidget {
 
   ReadPage({super.key, required this.imagePath});
   final String imagePath;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -56,15 +57,18 @@ class ImageFeed extends StatelessWidget {
       children: [
         // Image
         Expanded(
-          child: Container(
-            width: 500,
-            height: 300,
-            decoration: const BoxDecoration(
-              shape: BoxShape.rectangle,
-            ),
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.cover,
+          child: Hero(
+            tag: imagePath,
+            child: Container(
+              width: 500,
+              height: 300,
+              decoration: const BoxDecoration(
+                shape: BoxShape.rectangle,
+              ),
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),

@@ -30,9 +30,12 @@ class NewsCard extends StatelessWidget {
                 child: SizedBox(
                   height: 100,
                   width: 100,
-                  child: Image.asset(
-                    child,
-                    fit: BoxFit.cover,
+                  child: Hero(
+                    tag: child,
+                    child: Image.asset(
+                      child,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
